@@ -1,21 +1,14 @@
 const express = require('express')
 const app = express()
 const database = require("./db")
-// const bodyparser = require("body-parser")
 const ResultModel = require("./models/Result")
 const LoginModel = require("./models/Login")
-const session = require("express-session")
 
 app.use(express.urlencoded({ extended: false })) 
 app.use(express.json()) 
-app.use(session({secret: lkjwehULIYQWGDUWQYU}))
 
-<<<<<<< HEAD
 //conection with database
 database.authenticate().then(() => {
-=======
-database.authenticate().then(() => {    
->>>>>>> 97ed56ccffcea576a0f66e30975b440668354f97
     console.log("Successfully connected to database")
 }).catch(err => {
     console.log(err)
@@ -49,7 +42,6 @@ app.get('/results', (req, res) => {
     })
 })
 
-<<<<<<< HEAD
 //return all user the database
 app.get('/getUserResults/:username', (req, res) => {
     const {username} = req.params
@@ -91,7 +83,9 @@ app.post('/saveOperation', (req, res) => {
         }
     }).catch(err => {
         return res.json(err)
-=======
+    })
+})
+
 app.post('/saveOperation', (req, res) => {
     const {operation, result} = req.body
     ResultModel.create({operation, result}).then(result => {
@@ -109,9 +103,7 @@ app.post('/createUser', (req, res) => {
     }).then((user) => {
         console.log("Created user")
         res.send(user.username)
->>>>>>> 97ed56ccffcea576a0f66e30975b440668354f97
-    })
-    
+    })    
 })
 
 //return the result realized in front for back
@@ -121,10 +113,6 @@ app.post("/select", (req, res) => {
     res.send({display})    
 })
 
-<<<<<<< HEAD
-//port the server
-=======
->>>>>>> 97ed56ccffcea576a0f66e30975b440668354f97
 app.listen(3000, (err) => {
     if (err) {
         console.log('No server')
