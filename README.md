@@ -7,9 +7,9 @@ Create a database connection with this data below:
 
 Database: MySQL
 
-Database: calculator
-username: root
-Password: @Python123
+- Database: calculator
+- username: root
+- Password: @Python123
 
 The database and tables will be created automatically after starting the program with npm start or node app.js.
 
