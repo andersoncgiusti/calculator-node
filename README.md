@@ -9,17 +9,17 @@ Database: MySQL
 
 In your terminal configure:
 
-- mysql -h localhost -u root -p 
-Insert your password
+1 - mysql -h localhost -u root -p 
+1.1 - Insert your password
 
-- Alter your password
-ALTER USER 'root'@'localhost' IDENTIFIED BY 'passord'; ---> for ALTER USER 'root'@'localhost' IDENTIFIED BY '@Python123';
+2 - Alter your password
+2.1 - ALTER USER 'root'@'localhost' IDENTIFIED BY '@Python123';
 
-Create database:
+3 - Create database:
 
-- CREATE DATABASE calculator;
+3.1 - CREATE DATABASE calculator;
 
-See the informations below
+3.1.1 - See the informations below
 - Database: calculator
 - username: root
 - password: @Python123
